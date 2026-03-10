@@ -310,7 +310,7 @@ section {
 
 .filter-btn.active {
     background: var(--color-primary);
-    color: var(--color-accent);
+    color: var(--color-surface);
 }
 
 .course-grid {
@@ -337,7 +337,7 @@ section {
 
 .course-card.completed {
     background: var(--color-completed);
-    color: var(--color-completed-text);
+    color: var(--color-surface);
     border-color: var(--color-completed);
 }
 
