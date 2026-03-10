@@ -342,7 +342,7 @@ section {
 
 .course-card.incomplete {
     background: var(--color-incomplete);
-    color: var(--color-incomplete-text);
+    color: var(--color-text);
     border-color: var(--color-border);
 }
 
@@ -416,7 +416,7 @@ footer {
 
 .footer-modified {
     font-size: 0.78rem;
-    color: #666;
+    color: #fff;
 }
 
 /* ========================================
