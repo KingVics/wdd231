@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Lagos Tech Hub",
+    "address": "14 Broad Street, Lagos Island, Lagos",
+    "phone": "+234 801 234 5678",
+    "website": "https://www.lagostechhub.ng",
+    "image": "../images/techHub.jpg",
+    "membershipLevel": 3,
+    "description": "Premier technology and innovation center serving Lagos entrepreneurs."
+  },
+  {
+    "name": "Golden Gate Exports",
+    "address": "7 Apapa Wharf Road, Apapa, Lagos",
+    "phone": "+234 802 345 6789",
+    "website": "https://www.goldengateexports.ng",
+    "image": "../images/golden-gate.png",
+    "membershipLevel": 3,
+    "description": "Leading exporter of Nigerian agricultural products and manufactured goods."
+  },
+  {
+    "name": "Sunrise Microfinance Bank",
+    "address": "23 Allen Avenue, Ikeja, Lagos",
+    "phone": "+234 803 456 7890",
+    "website": "https://www.sunrisemfb.ng",
+    "image": "../images/Sunrise-Banks.webp",
+    "membershipLevel": 3,
+    "description": "Empowering small businesses with flexible loans and financial solutions."
+  },
+  {
+    "name": "Victoria Island Realty",
+    "address": "5 Adeola Odeku Street, Victoria Island, Lagos",
+    "phone": "+234 804 567 8901",
+    "website": "https://www.virealty.ng",
+    "image": "../images/victoria.webp",
+    "membershipLevel": 2,
+    "description": "Premium real estate agency specializing in commercial and residential properties."
+  },
+  {
+    "name": "Naija Fresh Farms",
+    "address": "88 Ojota Market Road, Ojota, Lagos",
+    "phone": "+234 805 678 9012",
+    "website": "https://www.naijafreshfarms.ng",
+    "image": "../images/NaijaFresh.jpg",
+    "membershipLevel": 2,
+    "description": "Supplying fresh organic produce directly from farm to market daily."
+  },
+  {
+    "name": "Blue Ocean Logistics",
+    "address": "19 Creek Road, Apapa, Lagos",
+    "phone": "+234 806 789 0123",
+    "website": "https://www.blueoceanlogistics.ng",
+    "image": "../images/blue-ocean.jpg",
+    "membershipLevel": 2,
+    "description": "End-to-end freight and supply chain management across West Africa."
+  },
+  {
+    "name": "Shine Bright Cleaning Services",
+    "address": "32 Ogba Road, Ikeja, Lagos",
+    "phone": "+234 807 890 1234",
+    "website": "https://www.shinebrightng.com",
+    "image": "../images/Shine.jpg",
+    "membershipLevel": 1,
+    "description": "Professional cleaning and facility management for offices and homes."
+  },
+  {
+    "name": "Harmony Event Planners",
+    "address": "11 Bode Thomas Street, Surulere, Lagos",
+    "phone": "+234 808 901 2345",
+    "website": "https://www.harmonyeventsng.com",
+    "image": "../images/harmony.jpg",
+    "membershipLevel": 1,
+    "description": "Creating memorable corporate and social events across Lagos and beyond."
+  },
+  {
+    "name": "Eko Solar Solutions",
+    "address": "45 Lekki-Epe Expressway, Lekki, Lagos",
+    "phone": "+234 809 012 3456",
+    "website": "https://www.ekosolarsolutions.ng",
+    "image": "../images/ekosolar.jpg",
+    "membershipLevel": 1,
+    "description": "Affordable solar energy installation and maintenance for homes and businesses."
+  }
+]

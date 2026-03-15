@@ -1,0 +1,124 @@
+/* --- Tablet: 640px+ --- */
+@media (min-width: 640px) {
+  .header-top {
+    justify-content: flex-start;
+  }
+
+  .header-text h1 {
+    font-size: 1.45rem;
+  }
+
+  .header-text .tagline {
+    font-size: 0.9rem;
+  }
+
+  /* Show nav inline, hide hamburger */
+  #menu-btn {
+    display: none;
+  }
+
+  #nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    background: transparent;
+    gap: 0.25rem;
+    margin-top: 0.75rem;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  #nav-menu li a {
+    border-bottom: none;
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  #nav-menu li a:hover,
+  #nav-menu li a.active {
+    background-color: var(--color-secondary);
+  }
+
+  /* Grid: 2 columns on tablet */
+  #members-container.grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-meta {
+    text-align: right;
+    border-top: none;
+    padding-top: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 1.25rem;
+    flex-shrink: 0;
+  }
+}
+
+/* --- Desktop: 900px+ --- */
+@media (min-width: 900px) {
+  header {
+    padding: 1.25rem 2rem;
+  }
+
+  .header-top {
+    gap: 1.25rem;
+  }
+
+  .header-top .logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  .header-text h1 {
+    font-size: 1.75rem;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  #nav-menu li a {
+    font-size: 0.95rem;
+    padding: 0.5rem 1.25rem;
+  }
+
+  main {
+    padding: 1.5rem 2rem;
+  }
+
+  /* Grid: 3 columns on desktop */
+  #members-container.grid-view {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .member-card {
+    padding: 1.5rem;
+  }
+
+  .member-card img {
+    width: calc(100% + 3rem);
+    margin: -1.5rem -1.5rem 0.5rem;
+    height: 200px;
+  }
+
+  .member-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* --- Desktop: 1200px+ --- */
+@media (min-width: 1200px) {
+  #members-container.grid-view {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

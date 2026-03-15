@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <rect width="80" height="80" rx="12" fill="#1a3a5c"/>
+  <!-- Building columns -->
+  <rect x="14" y="30" width="8" height="28" rx="2" fill="#c9a227"/>
+  <rect x="26" y="22" width="8" height="36" rx="2" fill="#c9a227"/>
+  <rect x="38" y="18" width="8" height="40" rx="2" fill="#e8c94a"/>
+  <rect x="50" y="22" width="8" height="36" rx="2" fill="#c9a227"/>
+  <rect x="62" y="30" width="8" height="28" rx="2" fill="#c9a227"/>
+  <!-- Base -->
+  <rect x="10" y="58" width="60" height="5" rx="2" fill="#c9a227"/>
+  <!-- Stars / globe top -->
+  <circle cx="42" cy="12" r="6" fill="none" stroke="#c9a227" stroke-width="2"/>
+  <line x1="42" y1="6" x2="42" y2="18" stroke="#c9a227" stroke-width="1.5"/>
+  <line x1="36" y1="12" x2="48" y2="12" stroke="#c9a227" stroke-width="1.5"/>
+</svg>
