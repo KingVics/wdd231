@@ -1,3 +1,6 @@
+import { footerDate } from "./footer.js";
+import { nav } from "./nav.js";
+
 const gridBtn = document.querySelector('#grid-btn');
 const listBtn = document.querySelector('#list-btn');
 const membersContainer = document.querySelector('#members-container');
@@ -64,17 +67,8 @@ setView(savedView);
 
 fetchMembers();
 
-// Footer last modified date
-document.querySelector('#last-modified').textContent = document.lastModified;
-document.querySelector('#year').textContent = new Date().getFullYear();
+footerDate()
 
+nav()
 
-// Hamburger nav toggle
-const menuBtn = document.querySelector('#menu-btn');
-const navMenu = document.querySelector('#nav-menu');
-menuBtn.addEventListener('click', () => {
-  const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
-  menuBtn.setAttribute('aria-expanded', String(!expanded));
-  navMenu.classList.toggle('open');
-});
 
