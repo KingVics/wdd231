@@ -1,26 +1,14 @@
 /* --- Tablet: 640px+ --- */
 @media (min-width: 640px) {
-  .header-top {
-    justify-content: flex-start;
-  }
+  .header-text h1 { font-size: 1.45rem; }
+  .header-text .tagline { font-size: 0.9rem; }
 
-  .header-text h1 {
-    font-size: 1.45rem;
-  }
-
-  .header-text .tagline {
-    font-size: 0.9rem;
-  }
-
-  /* Show nav inline, hide hamburger */
-  #menu-btn {
-    display: none;
-  }
+  #menu-btn { display: none; }
 
   #nav-menu {
     display: flex !important;
     flex-direction: row;
-    background: transparent;
+    background: none;
     gap: 0.25rem;
     margin-top: 0.75rem;
     border-radius: 0;
@@ -32,7 +20,6 @@
     border-radius: var(--radius);
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
-    background: rgba(255, 255, 255, 0.08);
   }
 
   #nav-menu li a:hover,
@@ -40,7 +27,6 @@
     background-color: var(--color-secondary);
   }
 
-  /* Grid: 2 columns on tablet */
   #members-container.grid-view {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -59,26 +45,21 @@
     padding-left: 1.25rem;
     flex-shrink: 0;
   }
+
+  .hero { padding: 4.5rem 2rem; }
+  .hero-content h2 { font-size: 2.4rem; }
+
+  .home-grid { grid-template-columns: 1fr 1fr; }
+  .spotlights-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* --- Desktop: 900px+ --- */
 @media (min-width: 900px) {
-  header {
-    padding: 1.25rem 2rem;
-  }
+  header { padding: 1.25rem 2rem; }
 
-  .header-top {
-    gap: 1.25rem;
-  }
-
-  .header-top .logo {
-    width: 64px;
-    height: 64px;
-  }
-
-  .header-text h1 {
-    font-size: 1.75rem;
-  }
+  .header-top { gap: 1.25rem; }
+  .header-top .logo { width: 64px; height: 64px; }
+  .header-text h1 { font-size: 1.75rem; }
 
   nav {
     display: flex;
@@ -92,18 +73,13 @@
     padding: 0.5rem 1.25rem;
   }
 
-  main {
-    padding: 1.5rem 2rem;
-  }
+  main { padding: 1.5rem 2rem; }
 
-  /* Grid: 3 columns on desktop */
   #members-container.grid-view {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .member-card {
-    padding: 1.5rem;
-  }
+  .member-card { padding: 1.5rem; }
 
   .member-card img {
     width: calc(100% + 3rem);
@@ -111,63 +87,27 @@
     height: 200px;
   }
 
-  .member-card h3 {
-    font-size: 1.1rem;
-  }
-}
+  .member-card h3 { font-size: 1.1rem; }
 
-/* --- Desktop: 1200px+ --- */
-@media (min-width: 1200px) {
-  #members-container.grid-view {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* =============================================
-   HOME PAGE – RESPONSIVE
-   ============================================= */
-
-/* Tablet: 640px+ */
-@media (min-width: 640px) {
-  .hero {
-    margin: -1rem -1rem 0;
-    padding: 4.5rem 2rem;
-  }
-
-  .hero-content h2 {
-    font-size: 2.4rem;
-  }
-
-  .home-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .spotlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Desktop: 900px+ */
-@media (min-width: 900px) {
   .hero {
     margin: -1.5rem -2rem 0;
     padding: 5.5rem 2rem;
   }
 
-  .hero-content h2 {
-    font-size: 3rem;
-  }
-
-  .hero-content p {
-    font-size: 1.1rem;
-  }
+  .hero-content h2 { font-size: 3rem; }
+  .hero-content p { font-size: 1.1rem; }
 
   .home-grid {
     grid-template-columns: 1fr 340px;
     align-items: start;
   }
 
-  .spotlights-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .spotlights-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* --- Wide: 1200px+ --- */
+@media (min-width: 1200px) {
+  #members-container.grid-view {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

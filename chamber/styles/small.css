@@ -1,7 +1,8 @@
-/* ---  Properties --- */
+/* --- Custom Properties --- */
 :root {
   --color-primary: #1a3a5c;
   --color-primary-dark: #0f2540;
+  --color-primary-light: #1e5f8a;
   --color-secondary: #c9a227;
   --color-secondary-light: #e8c94a;
   --color-bg: #f4f6f8;
@@ -9,21 +10,24 @@
   --color-text: #1e1e1e;
   --color-text-muted: #555555;
   --color-border: #dce2e9;
-  --color-gold-badge: #c9a227;
   --color-silver-badge: #8c9db5;
   --color-member-badge: #3a6ea5;
+  --color-error: #c0392b;
+  --color-text-on-gold: #000000;
+  --color-time-accent: #5c4800;
+  --color-hero-text: #c8d8e8;
+  --color-nav-link: #e8edf2;
+  --color-member-text: #e5f8ff;
   --radius: 8px;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.15);
   --transition: 0.25s ease;
-  --font-main: 'Segoe UI', system-ui, sans-serif;
   --max-width: 1200px;
-
   --font-display: 'DM Serif Display', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
 }
 
-/* --- Reset & Base --- */
+/* --- Base --- */
 *,
 *::before,
 *::after {
@@ -65,7 +69,7 @@ address {
 /* --- Header --- */
 header {
   background-color: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-surface);
   padding: 1rem;
 }
 
@@ -104,7 +108,7 @@ nav {
 
 #menu-btn {
   background: var(--color-secondary);
-  color: #000000;
+  color: var(--color-text-on-gold);
   border: none;
   padding: 0.45rem 0.7rem;
   font-size: 1.35rem;
@@ -135,7 +139,7 @@ nav {
 #nav-menu li a {
   display: block;
   padding: 0.75rem 1rem;
-  color: #e8edf2;
+  color: var(--color-nav-link);
   font-size: 0.95rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: background var(--transition), color var(--transition);
@@ -148,7 +152,7 @@ nav {
 #nav-menu li a:hover,
 #nav-menu li a.active {
   background-color: var(--color-secondary);
-  color: #000000;
+  color: var(--color-text-on-gold);
   text-decoration: none;
   font-weight: 600;
 }
@@ -206,17 +210,13 @@ main {
 .view-toggle button.active {
   background: var(--color-primary);
   border-color: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
-/* --- Member Cards  --- */
+/* --- Member Cards --- */
 #members-container {
   display: grid;
   gap: 1rem;
-}
-
-#members-container.grid-view {
-  grid-template-columns: 1fr;
 }
 
 .member-card {
@@ -272,7 +272,7 @@ main {
 .website-link {
   display: inline-block;
   background: var(--color-primary);
-  color: #ffffff !important;
+  color: var(--color-surface) !important;
   padding: 0.4rem 0.85rem;
   border-radius: var(--radius);
   font-size: 0.85rem;
@@ -300,33 +300,14 @@ main {
   margin: 0;
 }
 
-.membership--level-3 {
-  background: var(--color-gold-badge);
-  color: #000000;
-}
+.membership--level-3 { background: var(--color-secondary);    color: var(--color-text-on-gold); }
+.membership--level-2 { background: var(--color-silver-badge); color: var(--color-text-on-gold); }
+.membership--level-1 { background: var(--color-member-badge); color: var(--color-member-text);  }
 
-.membership--level-2 {
-  background: var(--color-silver-badge);
-  color: #000000;
-}
-
-.membership--level-1 {
-  background: var(--color-member-badge);
-  color: #e5f8ff;
-}
-
-/* Gold card border accent */
-.member-card:has(.membership--level-3) {
-  border-top-color: var(--color-gold-badge);
-}
-
-.member-card:has(.membership--level-2) {
-  border-top-color: var(--color-silver-badge);
-}
-
-.member-card:has(.membership--level-1) {
-  border-top-color: var(--color-member-badge);
-}
+/* Card border accent by membership */
+.member-card:has(.membership--level-3) { border-top-color: var(--color-secondary);    }
+.member-card:has(.membership--level-2) { border-top-color: var(--color-silver-badge); }
+.member-card:has(.membership--level-1) { border-top-color: var(--color-member-badge); }
 
 /* --- List View --- */
 #members-container.list-view .member-card {
@@ -339,20 +320,11 @@ main {
   border-left: 4px solid var(--color-border);
 }
 
-#members-container.list-view .member-card:has(.membership--level-3) {
-  border-left-color: var(--color-gold-badge);
-}
-
-#members-container.list-view .member-card:has(.membership--level-2) {
-  border-left-color: var(--color-silver-badge);
-}
-
-#members-container.list-view .member-card:has(.membership--level-1) {
-  border-left-color: var(--color-member-badge);
-}
+#members-container.list-view .member-card:has(.membership--level-3) { border-left-color: var(--color-secondary);    }
+#members-container.list-view .member-card:has(.membership--level-2) { border-left-color: var(--color-silver-badge); }
+#members-container.list-view .member-card:has(.membership--level-1) { border-left-color: var(--color-member-badge); }
 
 #members-container.list-view .member-card img {
-  grid-column: 1;
   grid-row: 1 / 3;
   width: 56px;
   height: 56px;
@@ -379,9 +351,7 @@ main {
   margin-top: 0;
 }
 
-#members-container.list-view .member-card .description {
-  display: none;
-}
+#members-container.list-view .member-card .description { display: none; }
 
 #members-container.list-view .member-card .website-link {
   grid-column: 3;
@@ -397,9 +367,9 @@ main {
   align-self: center;
 }
 
-/* --- Error state --- */
+/* --- Error --- */
 .error {
-  color: #c0392b;
+  color: var(--color-error);
   text-align: center;
   padding: 2rem;
 }
@@ -407,9 +377,8 @@ main {
 /* --- Footer --- */
 footer {
   background-color: var(--color-primary-dark);
-  color: #ccd6e0;
+  color: var(--color-surface);
   padding: 1.5rem 1rem;
-  margin-top: auto;
 }
 
 .footer-content {
@@ -428,12 +397,11 @@ footer {
 
 .footer-info h3 {
   margin: 0 0 0.3rem;
-  color: #ffffff;
   font-size: 0.95rem;
 }
 
 .footer-info address {
-  color: #fff;
+  color: var(--color-surface);
   font-size: 0.825rem;
 }
 
@@ -443,7 +411,6 @@ footer {
 
 .footer-meta {
   font-size: 0.8rem;
-  color: #fff;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 0.75rem;
 }
@@ -458,8 +425,9 @@ footer {
 
 /* --- Hero --- */
 .hero {
-  background: linear-gradient(150deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, #1e5f8a 100%);
-  color: #ffffff;
+  background-color: var(--color-primary-dark);
+  background-image: linear-gradient(150deg, var(--color-primary-dark) 0%, var(--color-primary) 55%, var(--color-primary-light) 100%);
+  color: var(--color-surface);
   text-align: center;
   padding: 3.5rem 1.5rem;
   margin: -1rem -1rem 0;
@@ -467,7 +435,6 @@ footer {
   overflow: hidden;
 }
 
-/* Decorative circles */
 .hero::before,
 .hero::after {
   content: '';
@@ -501,13 +468,12 @@ footer {
   font-family: var(--font-display);
   font-size: 1.85rem;
   margin: 0 0 1rem;
-  color: #ffffff;
   line-height: 1.15;
 }
 
 .hero-content p {
   font-size: 1rem;
-  color: #c8d8e8;
+  color: var(--color-hero-text);
   margin: 0 0 2rem;
   line-height: 1.65;
 }
@@ -515,12 +481,11 @@ footer {
 .hero-cta {
   display: inline-block;
   background: var(--color-secondary);
-  color: #000000 !important;
+  color: var(--color-text-on-gold) !important;
   padding: 0.85rem 2.25rem;
   border-radius: var(--radius);
   font-weight: 600;
   font-size: 1rem;
-  text-decoration: none;
   transition: background var(--transition), transform var(--transition);
 }
 
@@ -530,7 +495,7 @@ footer {
   transform: translateY(-1px);
 }
 
-/* --- Home Grid (events + weather) --- */
+/* --- Home Grid --- */
 .home-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -538,7 +503,7 @@ footer {
   margin: 1.75rem 0;
 }
 
-/* --- Section headings (home) --- */
+/* --- Home Section Headings --- */
 .events-section h2,
 .weather-section h2,
 .spotlights-section h2 {
@@ -577,7 +542,7 @@ footer {
   display: block;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #5c4800;
+  color: var(--color-time-accent);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 0.3rem;
@@ -613,10 +578,7 @@ footer {
   text-align: center;
 }
 
-.weather-icon {
-  width: 72px;
-  height: 72px;
-}
+.weather-icon { width: 72px; height: 72px; }
 
 .weather-temp {
   font-family: var(--font-display);
@@ -641,7 +603,6 @@ footer {
 
 .weather-loading {
   color: var(--color-text-muted);
-  font-size: 0.875rem;
   text-align: center;
 }
 
@@ -671,10 +632,7 @@ footer {
   margin: 0;
 }
 
-.forecast-day img {
-  width: 40px;
-  height: 40px;
-}
+.forecast-day img { width: 40px; height: 40px; }
 
 .forecast-day .day-temp {
   font-family: var(--font-display);
@@ -731,10 +689,5 @@ footer {
   margin: 0.3rem 0 0.4rem;
 }
 
-.spotlight-info address {
-  margin-bottom: 0.75rem;
-}
-
-.spotlight-info .membership {
-  margin: 0 0 0.2rem;
-}
+.spotlight-info address { margin-bottom: 0.75rem; }
+.spotlight-info .membership { margin: 0 0 0.2rem; }
