@@ -98,7 +98,9 @@ const courses = [
 const courseList = document.getElementById('courseList');
 const totalCreditsEl = document.getElementById('totalCredits');
 const filterBtns = document.querySelectorAll('.filter-btn');
+const courseTitle = document.querySelectorAll('.course-grid')
 
+console.log(courseTitle, 'd')
 let currentFilter = 'all';
 
 function renderCourses(filter) {
@@ -107,7 +109,7 @@ function renderCourses(filter) {
         : courses.filter(c => c.subject === filter);
 
     courseList.innerHTML = filtered.map(course => `
-    <div class="course-card ${course.completed ? 'completed' : 'incomplete'}">
+    <div id="courseTitle" class="course-card ${course.completed ? 'completed' : 'incomplete'}">
       ${course.subject} ${course.number}
     </div>
   `).join('');
@@ -124,6 +126,14 @@ filterBtns.forEach(btn => {
         renderCourses(currentFilter);
     });
 });
+
+courseTitle.forEach(course => {
+    console.log(course)
+    course.addEventListener('click', () => {
+        console.log('cliked')
+    })
+})
+
 
 // Initial render
 renderCourses('all');

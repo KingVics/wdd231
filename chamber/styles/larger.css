@@ -26,11 +26,6 @@
   #nav-menu li a.active {
     background-color: var(--color-secondary);
   }
-
-  #members-container.grid-view {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
@@ -45,12 +40,6 @@
     padding-left: 1.25rem;
     flex-shrink: 0;
   }
-
-  .hero { padding: 4.5rem 2rem; }
-  .hero-content h2 { font-size: 2.4rem; }
-
-  .home-grid { grid-template-columns: 1fr 1fr; }
-  .spotlights-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* --- Desktop: 900px+ --- */
@@ -74,40 +63,8 @@
   }
 
   main { padding: 1.5rem 2rem; }
-
-  #members-container.grid-view {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .member-card { padding: 1.5rem; }
-
-  .member-card img {
-    width: calc(100% + 3rem);
-    margin: -1.5rem -1.5rem 0.5rem;
-    height: 200px;
-  }
-
-  .member-card h3 { font-size: 1.1rem; }
-
-  .hero {
-    margin: -1.5rem -2rem 0;
-    padding: 5.5rem 2rem;
-  }
-
-  .hero-content h2 { font-size: 3rem; }
-  .hero-content p { font-size: 1.1rem; }
-
-  .home-grid {
-    grid-template-columns: 1fr 340px;
-    align-items: start;
-  }
-
-  .spotlights-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* --- Wide: 1200px+ --- */
 @media (min-width: 1200px) {
-  #members-container.grid-view {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
