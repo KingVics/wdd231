@@ -1,0 +1,257 @@
+:root {
+  --midnight: #0f172a;
+  --gold: #f59e0b;
+  --silver: #e5e7eb;
+  --screen: #f8fafc;
+  --ink: #1f2937;
+  --card: #ffffff;
+  --shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+  --radius: 20px;
+  --max-width: 1100px;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Source Sans 3", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top right, rgba(245, 158, 11, 0.16), transparent 20rem),
+    linear-gradient(180deg, #fff 0%, var(--screen) 45%, #eef2f7 100%);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  color: var(--midnight);
+}
+
+p,
+li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+code {
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  font-family: Consolas, monospace;
+  color: var(--midnight);
+  font-weight: 700;
+}
+
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.25rem 2rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--midnight);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.75rem);
+  line-height: 1.05;
+}
+
+.hero-copy {
+  max-width: 42rem;
+  margin-top: 1rem;
+  font-size: 1.15rem;
+}
+
+.page-layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+  background: var(--card);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card p + p,
+.card ul,
+.page-list,
+.color-grid,
+.type-samples,
+.wireframes {
+  margin-top: 1rem;
+}
+
+ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.color-grid,
+.page-list,
+.type-samples,
+.wireframes {
+  display: grid;
+  gap: 1rem;
+}
+
+.color-grid {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.color-swatch {
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.swatch-dark {
+  background: var(--midnight);
+  color: #fff;
+}
+
+.swatch-dark h3 {
+  color: #fff;
+}
+
+.swatch-dark code {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.swatch-gold {
+  background: var(--gold);
+  color: var(--midnight);
+}
+
+.swatch-gold code {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.swatch-light {
+  background: var(--silver);
+}
+
+.swatch-cream {
+  background: var(--screen);
+}
+
+.font-display {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.page-list {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.page-list article,
+.type-samples article {
+  padding: 1rem;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(229, 231, 235, 0.4), rgba(255, 255, 255, 0.95));
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.wireframe-card {
+  overflow: hidden;
+}
+
+.wireframes {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.wireframe h3 {
+  margin-bottom: 0.75rem;
+}
+
+.frame {
+  padding: 1rem;
+  border: 2px dashed rgba(15, 23, 42, 0.22);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.9), rgba(229, 231, 235, 0.7));
+}
+
+.mobile-frame {
+  max-width: 22rem;
+}
+
+.desktop-frame {
+  min-height: 100%;
+}
+
+.wf-box {
+  padding: 1rem 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 2px solid var(--midnight);
+  border-radius: 14px;
+  background: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+
+.wf-header,
+.wf-hero {
+  background: rgba(245, 158, 11, 0.2);
+}
+
+.wf-row {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.wf-box:last-child,
+.wf-row:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 760px) {
+  .page-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card:nth-child(1),
+  .card:nth-child(2),
+  .wireframe-card {
+    grid-column: 1 / -1;
+  }
+
+  .wf-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wide {
+    grid-column: 1 / -1;
+  }
+}
