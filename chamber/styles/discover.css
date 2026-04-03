@@ -1,0 +1,217 @@
+.discover-main {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.discover-hero,
+.discover-intro,
+.discover-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.discover-hero {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  background:
+    linear-gradient(135deg, rgba(26, 58, 92, 0.98), rgba(30, 95, 138, 0.96)),
+    url("../images/og-image.png") center/cover;
+  color: var(--color-surface);
+}
+
+.discover-kicker {
+  margin: 0 0 0.4rem;
+  color: #f6df8b;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.discover-hero h2 {
+  margin: 0 0 0.75rem;
+  color: var(--color-surface);
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.discover-hero p {
+  margin: 0;
+  max-width: 58ch;
+}
+
+.visit-banner {
+  align-self: start;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+}
+
+.visit-banner h3,
+.section-heading h2,
+.discover-intro h2,
+.discover-card h2 {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  color: var(--color-primary);
+}
+
+.visit-banner h3 {
+  color: var(--color-surface);
+}
+
+.visit-banner p,
+.discover-intro p,
+.section-heading p,
+.discover-card p,
+.discover-card address {
+  margin: 0;
+}
+
+.discover-intro,
+.section-heading {
+  padding: 1.25rem 1.35rem;
+}
+
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+.discover-card {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr auto;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.discover-card figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.discover-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.discover-card-content {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem;
+}
+
+.discover-card h2 {
+  font-size: 1.35rem;
+}
+
+.discover-card address {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.discover-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--color-secondary);
+  color: var(--color-text-on-gold);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.discover-button:hover {
+  background: var(--color-secondary-light);
+  transform: translateY(-1px);
+}
+
+.discover-card:nth-child(1) { grid-area: card1; }
+.discover-card:nth-child(2) { grid-area: card2; }
+.discover-card:nth-child(3) { grid-area: card3; }
+.discover-card:nth-child(4) { grid-area: card4; }
+.discover-card:nth-child(5) { grid-area: card5; }
+.discover-card:nth-child(6) { grid-area: card6; }
+.discover-card:nth-child(7) { grid-area: card7; }
+.discover-card:nth-child(8) { grid-area: card8; }
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-hero {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+
+  .discover-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "card1 card1"
+      "card2 card3"
+      "card4 card5"
+      "card6 card6"
+      "card7 card8";
+  }
+
+  .discover-card img {
+    transition: transform var(--transition), filter var(--transition), box-shadow var(--transition);
+  }
+
+  .discover-card figure:hover img {
+    transform: scale(1.05);
+    filter: saturate(1.12) contrast(1.05);
+  }
+}
+
+@media (min-width: 1025px) {
+  .discover-hero {
+    grid-template-columns: 2.2fr 0.95fr;
+    align-items: center;
+    padding: 1.75rem;
+  }
+
+  .discover-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      "card1 card1 card2"
+      "card3 card4 card2"
+      "card5 card6 card7"
+      "card5 card8 card8";
+  }
+
+  .discover-card img {
+    transition: transform var(--transition), filter var(--transition), box-shadow var(--transition);
+  }
+
+  .discover-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .discover-card figure:hover img {
+    transform: scale(1.06);
+    filter: brightness(1.03) saturate(1.15);
+  }
+}
