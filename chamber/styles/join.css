@@ -19,15 +19,12 @@
   color: var(--color-text-muted);
 }
 
-.join-hero p,
-.thankyou-hero p {
-  max-width: 68ch;
-  margin: 0;
-}
 
 .join-hero p,
 .thankyou-hero p {
   color: black;
+  max-width: 68ch;
+  margin: 0;
 }
 
 .join-layout,
@@ -140,9 +137,17 @@
   animation: card-enter 0.7s ease forwards;
 }
 
-.membership-card:nth-child(2) { animation-delay: 0.12s; }
-.membership-card:nth-child(3) { animation-delay: 0.24s; }
-.membership-card:nth-child(4) { animation-delay: 0.36s; }
+.membership-card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.membership-card:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.membership-card:nth-child(4) {
+  animation-delay: 0.36s;
+}
 
 .membership-card h3 {
   margin: 0 0 0.4rem;
@@ -162,10 +167,21 @@
   text-transform: uppercase;
 }
 
-.membership-card--np { border-left-color: #4f7d4f; }
-.membership-card--bronze { border-left-color: #9a5b2d; }
-.membership-card--silver { border-left-color: var(--color-silver-badge); }
-.membership-card--gold { border-left-color: var(--color-secondary); }
+.membership-card--np {
+  border-left-color: #4f7d4f;
+}
+
+.membership-card--bronze {
+  border-left-color: #9a5b2d;
+}
+
+.membership-card--silver {
+  border-left-color: var(--color-silver-badge);
+}
+
+.membership-card--gold {
+  border-left-color: var(--color-secondary);
+}
 
 .membership-link,
 .modal-close {
@@ -212,7 +228,7 @@
   color: var(--color-text);
 }
 
-.modal-benefits li + li {
+.modal-benefits li+li {
   margin-top: 0.45rem;
 }
 
